@@ -1,7 +1,7 @@
 package bo.edu.ucb.demo.Backend.model;
 import javax.persistence.*;
 @Entity
-public class student {
+public class Student {
     //public Integer studentId;
     //public String fullName;
     @Id
@@ -12,10 +12,7 @@ public class student {
     @Column(name = "full_name")
     @Basic(optional = false)
     private String fullName;
-    @Column(name = "age")
-    private Integer age;
-    public student() {
-
+    public Student() {
     }
 
     public Integer getStudentId() {
@@ -35,21 +32,13 @@ public class student {
         this.fullName = fullName;
     }
 
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
 
 
     @Override
         public String toString() {
             return "Student{" +
                     "studentId=" + studentId +
-                    ", fullName='" + fullName + '\'' + 
-                    ", age='" + age + '\'' +
+                    ", fullName='" + fullName + '\'' +
                     
 
                     '}';
